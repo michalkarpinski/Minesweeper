@@ -9,6 +9,8 @@ const board = createBoard(BOARD_SIZE, NUMER_OF_MINES);
 const boardElement = document.querySelector('.board');
 boardElement.style.setProperty('--size', BOARD_SIZE);
 
+console.log(board);
+
 board.forEach(row => {
     row.forEach(tile => {
         boardElement.append(tile.element);
