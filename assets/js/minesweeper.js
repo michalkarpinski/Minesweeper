@@ -43,7 +43,17 @@ export function createBoard(boardSize, numberOfMines) {
 }
 
 export function markTile(tile) {
-  if (tile.status !== TILE_STATUSES.HIDDEN) {
+  if (
+    tile.status !== TILE_STATUSES.HIDDEN &&
+    tile.status !== TILE_STATUSES.MARKED
+  ) {
+    return;
+  }
+
+  if (tile.status === TILE_STATUSES.MARKED) {
+    tile.status = TILE_STATUSES.HIDDEN;
+  } else {
+    tile.status = TILE_STATUSES.MARKED;
   }
 }
 

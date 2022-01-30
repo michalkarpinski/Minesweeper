@@ -1,4 +1,4 @@
-import { createBoard } from "./minesweeper.js";
+import { createBoard, markTile } from "./minesweeper.js";
 
 const BOARD_SIZE = 10;
 const NUMER_OF_MINES = 10;
