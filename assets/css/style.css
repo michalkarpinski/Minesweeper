@@ -13,16 +13,30 @@ body {
   color: white;
 }
 
-.title {
-  margin: 20px;
+/* #main-header
+/* ************************************************** */
+#main-header {
+  text-align: center;
 }
 
+.main-title {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 51px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* #main-nav
+/* ************************************************** */
 .subtext {
   color: #ccc;
   font-size: 1.5rem;
   margin-bottom: 10px;
 }
 
+/* #main-content
+/* ************************************************** */
 .board {
   display: inline-grid;
   padding: 10px;
