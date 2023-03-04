@@ -1,8 +1,9 @@
 export const TILE_STATUSES = {
+  EMPTY: "empty",
   HIDDEN: "hidden",
+  MARKED: "marked",
   MINE: "mine",
   NUMBER: "number",
-  MARKED: "marked",
 };
 
 export function createBoard(boardSize, numberOfMines) {
@@ -67,7 +68,7 @@ export function revealTile(board, tile) {
     return;
   }
 
-  tile.status = TILE_STATUSES.NUMBER;
+  tile.status = TILE_STATUSES.EMPTY;
 
   const adjacentTiles = nearbyTiles(board, tile);
   const mines = adjacentTiles.filter((t) => t.mine);
@@ -75,6 +76,7 @@ export function revealTile(board, tile) {
     adjacentTiles.forEach(revealTile.bind(null, board));
   } else {
     tile.element.textContent = mines.length;
+    tile.status = TILE_STATUSES.NUMBER;
   }
 }
 
@@ -82,6 +84,7 @@ export function checkWin(board) {
   return board.every((row) => {
     return row.every((tile) => {
       return (
+        tile.status === TILE_STATUSES.EMPTY ||
         tile.status === TILE_STATUSES.NUMBER ||
         (tile.mine &&
           (tile.status === TILE_STATUSES.HIDDEN ||

@@ -72,8 +72,13 @@ body {
   background-color: hsl(0, 100%, 50%);
 }
 
+.board > [data-status="empty"],
 .board > [data-status="number"] {
-  background-color: hsl(0, 0%, 15%);
+  background-color: hsl(0, 0%, 13%);
+}
+
+.board > [data-status="number"] {
+  border: 1px solid hsl(0, 0%, 30%);
 }
 
 .board > [data-status="marked"] {
