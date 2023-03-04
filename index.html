@@ -8,19 +8,31 @@
 
     <title>Minesweeper</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="assets/css/style.css">
 
     <script src="assets/js/script.js" type="module"></script>
 </head>
 
 <body>
-    <h3 class="title">Minesweeper</h3>
+    <main id="main">
+        <header id="main-header">
+            <h1 class="main-title">Minesweeper</h1>
+        </header>
 
-    <div class="subtext">
-        Mines left: <span data-mine-count></span>
-    </div>
+        <nav id="main-nav">
+            <div class="subtext">
+                Mines left: <span data-mine-count></span>
+            </div>
+        </nav>
 
-    <div class="board"></div>
+        <section id="main-content">
+            <div class="board"></div>
+        </section>
+    </main>
 </body>
 
 </html>
