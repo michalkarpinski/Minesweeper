@@ -4,7 +4,6 @@
 
 body {
   margin: 0;
-  background-color: #333;
   background-color: hsl(0, 0%, 10%);
   font-family: "Rajdhani", sans-serif;
   font-size: 3rem;
@@ -48,11 +47,9 @@ body {
 /* ************************************************** */
 .board {
   display: inline-grid;
-  padding: 10px;
-  grid-template-columns: repeat(var(--size), 60px);
-  grid-template-rows: repeat(var(--size), 60px);
-  gap: 4px;
-  background-color: #777;
+  grid-template-columns: repeat(var(--size), 50px);
+  grid-template-rows: repeat(var(--size), 50px);
+  gap: 10px;
 }
 
 .board > * {
@@ -61,24 +58,24 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 30px;
   color: white;
-  border: 2px solid #bbb;
   user-select: none;
 }
 
 .board > [data-status="hidden"] {
-  background-color: #bbb;
   cursor: pointer;
+  background-color: hsl(0, 0%, 30%);
 }
 
 .board > [data-status="mine"] {
-  background-color: red;
+  background-color: hsl(0, 100%, 50%);
 }
 
 .board > [data-status="number"] {
-  background-color: none;
+  background-color: hsl(0, 0%, 15%);
 }
 
 .board > [data-status="marked"] {
-  background-color: yellow;
+  background-color: hsl(60, 100%, 50%);
 }
